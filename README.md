@@ -193,9 +193,9 @@ The above parameters map to the env variables defined in [bitnami/rabbitmq](http
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
 ```bash
-$ helm install my-release \
+$ helm install my-release . -f values.yaml \
   --set rabbitmq.username=admin,rabbitmq.password=secretpassword,rabbitmq.erlangCookie=secretcookie \
-    stable/rabbitmq
+    -n rabbitmq
 ```
 
 The above command sets the RabbitMQ admin username and password to `admin` and `secretpassword` respectively. Additionally the secure erlang cookie is set to `secretcookie`.
@@ -203,7 +203,7 @@ The above command sets the RabbitMQ admin username and password to `admin` and `
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install my-release -f values.yaml stable/rabbitmq
+$ helm install my-release . -f values.yaml -n rabbitmq
 ```
 
 >
@@ -388,7 +388,7 @@ The chart mounts a [Persistent Volume](http://kubernetes.io/docs/user-guide/pers
 1. Install the chart
 
 ```bash
-$ helm install my-release --set persistence.existingClaim=PVC_NAME stable/rabbitmq
+$ helm install my-release . -f values.yaml --set persistence.existingClaim=PVC_NAME -n rabbitmq
 ```
 
 ### Adjust permissions of the persistence volume mountpoint
@@ -419,5 +419,5 @@ Backwards compatibility is not guaranteed unless you modify the labels used on t
 Use the workaround below to upgrade from versions previous to 3.0.0. The following example assumes that the release name is rabbitmq:
 
 ```console
-$ kubectl delete statefulset rabbitmq --cascade=false
+$ kubectl delete statefulset rabbitmq --cascade=false -n rabbitmq
 ```
