@@ -2,13 +2,6 @@
 
 [RabbitMQ](https://www.rabbitmq.com/) is an open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
 
-
-## TL;DR;
-
-```bash
-$ helm install my-release stable/rabbitmq
-```
-
 ## Introduction
 
 This chart bootstraps a [RabbitMQ](https://github.com/bitnami/bitnami-docker-rabbitmq) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
