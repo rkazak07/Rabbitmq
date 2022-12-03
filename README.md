@@ -3,13 +3,6 @@
 [RabbitMQ](https://www.rabbitmq.com/) is an open source message broker software that implements the Advanced Message Queuing Protocol (AMQP).
 
 
-```bash
-$ helm repo add bitnami https://charts.bitnami.com/bitnami
-$ helm upgrade my-release bitnami/<chart>
-```
-
-
-
 ## TL;DR;
 
 ```bash
