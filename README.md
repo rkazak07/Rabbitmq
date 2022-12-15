@@ -32,7 +32,7 @@ The command deploys RabbitMQ on the Kubernetes cluster in the default configurat
 To install the `rabbitmq` deployment:
 
 ```bash
-$ helm install rabbitmq-cluster . -f values.yaml -n rabbitmq
+$ helm install my-release . -f values.yaml -n rabbitmq
 ```
 
 ## Uninstalling the Chart
@@ -40,7 +40,7 @@ $ helm install rabbitmq-cluster . -f values.yaml -n rabbitmq
 To uninstall/delete the `rabbitmq` deployment:
 
 ```bash
-$ helm delete rabbitmq-cluster -n rabbitmq
+$ helm delete my-release -n rabbitmq
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
